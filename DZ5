@@ -1,0 +1,70 @@
+'''
+Задача 26:
+Напишите программу, которая на вход принимает два числа A и B,
+и возводит число А в целую степень B с помощью рекурсии.
+
+'''
+
+print('Решение задачи 26')
+
+
+def num():
+
+    x = int(input(f'Ввод: '))
+    return x
+
+
+def recers(number_1, number_2):
+
+    if number_2 == 0:
+        return 1
+    elif number_2 == 1:
+        return number_1
+    else:
+        return recers(number_1, number_2 - 1) * number_1
+
+
+print(f'Введите первое число')
+x = num()
+print(f'Введите степень числа')
+y = num()
+print(f'Ответ: {x} в степени {y} равно: {recers(x, y)}')
+print()
+'''
+
+Задача 28:
+Напишите рекурсивную функцию sum(a, b), возвращающую сумму двух целых
+неотрицательных чисел. Из всех арифметических операций допускаются только
++1 и -1. Также нельзя использовать циклы.
+
+'''
+print('*' * 100)
+print('Решение задачи 28')
+
+
+def num():
+
+    a = int(input(f'Введите целое неотрицательное число: '))
+    return a
+
+
+def compare(num1, num2):
+    if num1 > num2:
+        a = num1
+        num1 = num2
+        num2 = a
+    print(f'Сумма введенных чисел равна {sum_num(b, c)}')
+
+
+def sum_num(number_1, number_2):
+
+    if number_2 == 0:
+        return number_1
+    else:
+        return sum_num(number_1, number_2 - 1) + 1
+
+
+b = num()
+c = num()
+compare(b, c)
+
